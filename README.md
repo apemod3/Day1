@@ -3,6 +3,7 @@ Calculator
 
 A command-line calculator built with core JavaScript. Performs basic arithmetic operations (+, -, *, /) using browser prompt() and alert() dialogs. Focused on mastering variables, operators, and input sanitization.
 
+
 Features:
 
 Handles user input validation (non-numeric entries)
@@ -13,8 +14,8 @@ Lightweight and dependency-free
 
 
 Tech Stack:
-
 JavaScript
+
 
 
 Key Learnings:
@@ -33,6 +34,7 @@ Number Guesser
 A terminal-style number guessing game where players guess a random integer between 1–10 within 3 attempts. Built to practice loops, conditionals, and random number generation.
 
 
+
 Features:
 
 Dynamic feedback (too high/too low)
@@ -42,9 +44,9 @@ Attempt counter with game-over logic
 Randomized target number using Math.random()
 
 
-Tech Stack:
-
+Tech Stack: 
 JavaScript
+
 
 
 Key Learnings:
