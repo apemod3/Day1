@@ -27,3 +27,12 @@ input, button {
     font-weight: bold;
     min-height: 1.5rem;
 }
+
+/* Add to style.css */
+#message.correct { color: green; }
+#message.wrong { color: red; }
+
+button:disabled {
+    background: #ddd;
+    cursor: not-allowed;
+}
