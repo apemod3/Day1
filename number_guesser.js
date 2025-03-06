@@ -1,29 +1,37 @@
-//number_guesser
+//Initialise game variables
+let targetNumber = Math.floor(Math.random() * 10) + 1;
+let remainingGuesses = 3;
 
-//generate a random 1-10 number
-const targetNumber = Math.floor(Math.random()*10) + 1;
-let guessCount =  0;
+// DOM elements
+const guessInput = document.getElementById('guessInput');
+const guessButton = document.getElementById('guessButton');
+const message = document.getElementById('message');
+const counter = document.getElementById('counter');
 
-//create a loop for guesses
-while (guessCount < 3) {
-    //Get user input
-    const userGuess = parseInt(prompt("Guess a number between 1-10: "));
+//game logic
+function checkGuess() {
+    const userGuess = parseInt(guessInput.value);
 
-
-    //compare guess to target number
-    if (userGuess === targetNumber) {
-        alert("🎉 Correct!! Good Guess!");
-        break; //exits loop
-    } else if (userGuess < targetNumber) {
-        alert("Too low, try again!")
-    } else {
-        alert("Too high, try again!");
+    //validation
+    if (isNaN(userGuess) || userGuess < 1 || userGuess > 10) {
+        message.textContent = "⚠️ Enter a number between 1-10!";
+        return;
     }
 
-    guessCount++;
+    remainingGuesses--;
+    counter.textContent = remainingGuesses;
+
+    if (userGuess === targetNumber) {
+        message.textContent = "🎉 Correct! You won!";
+        guessButton.disabled = true;
+    } else if (remainingGuesses === 0) {
+        message.textContent = `Game Over! The number was ${targetNumber}.`;
+        guessButton.disabled = true;
+    } else {
+        message.textContent = userGuess < targetNumber ? "⬆️ Too low!" : "⬇️ Too high!";
+        guessInput.value = ""; //clear input
+    }
 }
 
-//if all guesses are used up
-if (guessCount === 3) {
-    alert(`Game Over! The number was ${targetNumber}.`)
-}
+//Event listener
+guessButton.addEventListener('click', checkGuess);

@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Number Guesser</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔢 Number Guesser (1-10)</h1>
+        <input type="number" id="guessInput" min="1" max="10" placeholder="Enter your guess">
+        <button id="guessButton">Guess!</button>
+        <p id="message"></p>
+        <p>Remaining guesses: <span id="counter">3</span></p>
+    </div>
     <script src="number_guesser.js"></script>
-  </body>
+</body>
 </html>
