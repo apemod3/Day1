@@ -29,10 +29,24 @@ input, button {
 }
 
 /* Add to style.css */
-#message.correct { color: green; }
-#message.wrong { color: red; }
+.correct { color: green; }
+.wrong { color: red; }
 
 button:disabled {
     background: #ddd;
     cursor: not-allowed;
 }
+
+#score {
+    color: #2ecc71;  
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-left: 5px;
+    display: inline-block; /*aligns properly with text*/
+    transition: all 0.3s ease; /* Smooth color/size changes */
+}
+
+#score.updated {
+    transform: scale(1.1);
+    color: #27ae60;
+  }
