@@ -19,7 +19,7 @@ A browser-based game where players guess a random number between 1–10 within 3
 - **CSS3**: Flexbox, animations, responsive design.  
 
 ### Live Demo  
-👉 [Play the Number Guesser](https://apemod3.github.io/Day1/number-guesser.html)  
+👉 [Play the Number Guesser](https://apemod3.github.io/Day1/number_guesser.html)  
 
 ---
 
